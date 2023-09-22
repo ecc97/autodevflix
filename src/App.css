@@ -1,0 +1,74 @@
+main{
+  margin-bottom: 1.3rem;
+}
+/*Estilo modificados del slider con sus clases*/
+.slick-slider{
+  padding-top: 1rem;
+}
+.slick-list{
+  height: 211px;
+}
+
+.slick-dots li button:before{
+  font-size: 1rem !important;
+  top: 2rem !important;
+  color: white !important;
+}
+.slick-dots li.slick-active button:before{
+  color: white !important;
+}
+
+/*videocard clase*/
+.videocard{
+  padding: 0 1rem;
+}
+
+/*iconos editar/eliminar*/
+#icon-edit, #icon-elim{
+  width: 1.7em;
+  height: 1.7em;
+}
+/*estilos de reactplayer*/
+.reactPlayer{
+  padding: .3rem 1rem;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.reactPlayer:hover{
+  filter: drop-shadow(0 0 1em white);
+}
+
+div.react-player__play-icon{
+  border-color: transparent transparent transparent #181a1b !important;
+}
+.react-player__preview{
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+/*Estilos de colores de unos texto pertenecientes a componentes de MUI con sus clases*/
+label.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root, label.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root, input.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input, textarea.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input, div.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input  {
+  color: white;
+} 
+
+fieldset.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: gray;
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+  background-color: #181a1b !important;
+}
+
+/*Estilos para el componente VideoWatch y sus clases*/
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+.videoRP {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+span.categoria{
+  text-align: center;
+}
