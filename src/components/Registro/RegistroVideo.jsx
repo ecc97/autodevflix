@@ -67,10 +67,10 @@ const RegistroVideo = (props) => {
     
     return (
     <Box component='form' onSubmit={(e) => {e.preventDefault(); handleCreate({titulo, video, imagen, categoria, descripcion})}}>
-        <TextField id='titulo' label='Título' variant="outlined" fullWidth margin="normal" type='text' onChange={(e) => { setTitulo(e.target.value); }} value={titulo} error={errortitle.titulo.error} helperText={errortitle.titulo.error ? errortitle.titulo.mensaje : ''} onBlur={(e) => {setErrorTitle(validarTexto(e.target.value))}} required />
-        <TextField id='urlVideo' label='Link del vídeo' variant="outlined" fullWidth margin="normal" type='url' onChange={(e) => { setVideo(e.target.value); }} value={video} error={errorVideo.link.error} helperText={errorVideo.link.error ? errorVideo.link.mensaje : ''} onBlur={(e) => {setErrorVideo(validarUrl(e.target.value))}} required />
-        <TextField id='urlMiniatura' label='Link de la miniatura del vídeo' variant="outlined" fullWidth margin="normal" type='url' onChange={(e) => { setImagen(e.target.value); }} value={imagen} error={errorImg.link.error} helperText={errorImg.link.error ? errorImg.link.mensaje : ''} onBlur={(e) => {setErrorImg(validarUrl(e.target.value))}} required />
-        <FormControl sx={{ minWidth: 130 }} margin="normal">
+        <TextField id='titulo' className='inputRegistro' label='Título' variant="outlined" fullWidth margin="normal" type='text' onChange={(e) => { setTitulo(e.target.value); }} value={titulo} error={errortitle.titulo.error} helperText={errortitle.titulo.error ? errortitle.titulo.mensaje : ''} onBlur={(e) => {setErrorTitle(validarTexto(e.target.value))}} required />
+        <TextField id='urlVideo' className='inputRegistro' label='Link del vídeo' variant="outlined" fullWidth margin="normal" type='url' onChange={(e) => { setVideo(e.target.value); }} value={video} error={errorVideo.link.error} helperText={errorVideo.link.error ? errorVideo.link.mensaje : ''} onBlur={(e) => {setErrorVideo(validarUrl(e.target.value))}} required />
+        <TextField id='urlMiniatura' className='inputRegistro' label='Link de la miniatura del vídeo' variant="outlined" fullWidth margin="normal" type='url' onChange={(e) => { setImagen(e.target.value); }} value={imagen} error={errorImg.link.error} helperText={errorImg.link.error ? errorImg.link.mensaje : ''} onBlur={(e) => {setErrorImg(validarUrl(e.target.value))}} required />
+        <FormControl sx={{ minWidth: 130 }} margin="normal" className='inputRegistro'>
             <InputLabel>Categoría</InputLabel>
             <Select autoWidth value={categoria} onChange={handleChange} label="Categoría" onBlur={handleBlur} error={errorCtg.categoria.error} required>
                 <MenuItem disabled selected value="">
@@ -87,7 +87,7 @@ const RegistroVideo = (props) => {
             </FormHelperText>
             )}
         </FormControl>
-        <TextField label='Descripción' multiline rows={4} fullWidth margin="normal" onChange={manejarCambio} value={descripcion} error={errorDes.descripcion.error} helperText={errorDes.descripcion.error ? errorDes.descripcion.mensaje : ''} onBlur={(e) => {setErrorDes(validarTextArea(e.target.value))}} required />
+        <TextField label='Descripción' className='inputRegistro' multiline rows={4} fullWidth margin="normal" onChange={manejarCambio} value={descripcion} error={errorDes.descripcion.error} helperText={errorDes.descripcion.error ? errorDes.descripcion.mensaje : ''} onBlur={(e) => {setErrorDes(validarTextArea(e.target.value))}} required />
         <ButtonGroup sx={{ marginTop: '2rem', justifyContent: 'space-between', gap:'1rem', '@media(width <= 480px)': {flexDirection: 'column'}}} fullWidth>
             <Button sx={{width: '180px', height: '54px', '@media(width <= 480px)': {width: '100%'}}} variant="contained" type="submit">Guardar</Button>
             <Button sx={{width: '180px', height: '54px', backgroundColor: `${colorBlanco} !important`, color: `${colorNegro} !important`, marginRight: 'auto !important', '@media(width <= 480px)': {width: '100%'}}} variant="outlined" type="reset" onClick={limpiarCampos}>Limpiar</Button>

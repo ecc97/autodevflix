@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Campo, CampoTextArea, CampoColor } from "./Campo";
 import { Box, TextField, ButtonGroup, Button } from "@mui/material";
 import { colorBlanco, colorNegro } from "../../css/Variables";
 import { validarTexto, validarTextArea } from "./validaciones";
@@ -47,9 +46,9 @@ const RegistroCategoria = (props) => {
         setColor('#000000')
     }
     return <Box component='form' onSubmit={(e) => {e.preventDefault(); handleCreate({nombre, color, descripcion})}}>
-        <TextField id='titulo' label='Título' variant="outlined" fullWidth margin="normal" type='text' onChange={(e) => { setNombre(e.target.value); }} value={nombre} error={errorName.titulo.error} helperText={errorName.titulo.error ? errorName.titulo.mensaje : ''} onBlur={(e) => {setErrorName(validarTexto(e.target.value))}} required />
-        <TextField id='color' label='Color' value={color} variant="outlined" fullWidth margin="normal" type='color' onChange={(e) => {handleColorChange(e.target.value)}} />
-        <TextField label='Descripción' multiline rows={4} fullWidth margin="normal" onChange={(e) => {
+        <TextField id='titulo' className='inputRegistro' label='Título' variant="outlined" fullWidth margin="normal" type='text' onChange={(e) => { setNombre(e.target.value); }} value={nombre} error={errorName.titulo.error} helperText={errorName.titulo.error ? errorName.titulo.mensaje : ''} onBlur={(e) => {setErrorName(validarTexto(e.target.value))}} required />
+        <TextField id='color' className='inputRegistro' label='Color' value={color} variant="outlined" fullWidth margin="normal" type='color' onChange={(e) => {handleColorChange(e.target.value)}} />
+        <TextField label='Descripción' className='inputRegistro' multiline rows={4} fullWidth margin="normal" onChange={(e) => {
         setDescripcion(e.target.value)}} value={descripcion} error={errorDes.descripcion.error} helperText={errorDes.descripcion.error ? errorDes.descripcion.mensaje : ''} onBlur={(e) => {setErrorDes(validarTextArea(e.target.value))}} required />
         <ButtonGroup sx={{ marginTop: '2rem', justifyContent: 'space-between', gap:'1rem', '@media(width <= 480px)': {flexDirection: 'column'}}} fullWidth>
             <Button sx={{width: '180px', height: '54px', '@media(width <= 480px)': {width: '100%'}}} variant="contained" type="submit">Guardar</Button>

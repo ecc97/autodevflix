@@ -46,17 +46,15 @@ div.react-player__play-icon{
   background-repeat: no-repeat;
 }
 
-/*Estilos de colores de unos texto pertenecientes a componentes de MUI con sus clases*/
-label.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root, label.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root, input.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input, textarea.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input, div.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input  {
+/*Estilos de colores de unos textos y border pertenecientes a componentes campo de MUI con sus clases*/
+.inputRegistro label, .inputRegistro div{
   color: white;
-} 
-
-fieldset.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+}
+.inputRegistro fieldset{
   border-color: gray;
 }
-
-.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
-  background-color: #181a1b !important;
+ul[role="listbox"] {
+  background-color: #181a1b;
 }
 
 /*Estilos para el componente VideoWatch y sus clases*/
